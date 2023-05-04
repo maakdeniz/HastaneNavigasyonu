@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B77EDB22A03E4C7006A44D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77EDB12A03E4C7006A44D8 /* AppDelegate.swift */; };
+		2B77EDB42A03E4C7006A44D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77EDB32A03E4C7006A44D8 /* SceneDelegate.swift */; };
+		2B77EDB62A03E4C7006A44D8 /* MeetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77EDB52A03E4C7006A44D8 /* MeetViewController.swift */; };
+		2B77EDB92A03E4C7006A44D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B77EDB72A03E4C7006A44D8 /* Main.storyboard */; };
+		2B77EDBC2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B77EDBA2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodeld */; };
+		2B77EDBE2A03E4C9006A44D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B77EDBD2A03E4C9006A44D8 /* Assets.xcassets */; };
+		2B77EDC12A03E4C9006A44D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B77EDBF2A03E4C9006A44D8 /* LaunchScreen.storyboard */; };
+		2B77EDCA2A03E656006A44D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77EDC92A03E656006A44D8 /* MapViewController.swift */; };
+		2B77EDCC2A03E668006A44D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77EDCB2A03E668006A44D8 /* SearchViewController.swift */; };
+		2B77EDCF2A03EEC7006A44D8 /* hospitals.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B77EDCE2A03EDC9006A44D8 /* hospitals.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B77EDAE2A03E4C7006A44D8 /* HastaneNavigasyonu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HastaneNavigasyonu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B77EDB12A03E4C7006A44D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B77EDB32A03E4C7006A44D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B77EDB52A03E4C7006A44D8 /* MeetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetViewController.swift; sourceTree = "<group>"; };
+		2B77EDB82A03E4C7006A44D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B77EDBB2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HastaneNavigasyonu.xcdatamodel; sourceTree = "<group>"; };
+		2B77EDBD2A03E4C9006A44D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B77EDC02A03E4C9006A44D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B77EDC22A03E4C9006A44D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B77EDC92A03E656006A44D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2B77EDCB2A03E668006A44D8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2B77EDCE2A03EDC9006A44D8 /* hospitals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hospitals.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B77EDAB2A03E4C7006A44D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B77EDA52A03E4C7006A44D8 = {
+			isa = PBXGroup;
+			children = (
+				2B77EDB02A03E4C7006A44D8 /* HastaneNavigasyonu */,
+				2B77EDAF2A03E4C7006A44D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B77EDAF2A03E4C7006A44D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B77EDAE2A03E4C7006A44D8 /* HastaneNavigasyonu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B77EDB02A03E4C7006A44D8 /* HastaneNavigasyonu */ = {
+			isa = PBXGroup;
+			children = (
+				2B77EDCD2A03ED97006A44D8 /* Resources */,
+				2B77EDC82A03E629006A44D8 /* Controller */,
+				2B77EDB12A03E4C7006A44D8 /* AppDelegate.swift */,
+				2B77EDB32A03E4C7006A44D8 /* SceneDelegate.swift */,
+				2B77EDB72A03E4C7006A44D8 /* Main.storyboard */,
+				2B77EDBD2A03E4C9006A44D8 /* Assets.xcassets */,
+				2B77EDBF2A03E4C9006A44D8 /* LaunchScreen.storyboard */,
+				2B77EDC22A03E4C9006A44D8 /* Info.plist */,
+				2B77EDBA2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodeld */,
+			);
+			path = HastaneNavigasyonu;
+			sourceTree = "<group>";
+		};
+		2B77EDC82A03E629006A44D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B77EDB52A03E4C7006A44D8 /* MeetViewController.swift */,
+				2B77EDC92A03E656006A44D8 /* MapViewController.swift */,
+				2B77EDCB2A03E668006A44D8 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B77EDCD2A03ED97006A44D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B77EDCE2A03EDC9006A44D8 /* hospitals.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B77EDAD2A03E4C7006A44D8 /* HastaneNavigasyonu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B77EDC52A03E4C9006A44D8 /* Build configuration list for PBXNativeTarget "HastaneNavigasyonu" */;
+			buildPhases = (
+				2B77EDAA2A03E4C7006A44D8 /* Sources */,
+				2B77EDAB2A03E4C7006A44D8 /* Frameworks */,
+				2B77EDAC2A03E4C7006A44D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HastaneNavigasyonu;
+			productName = HastaneNavigasyonu;
+			productReference = 2B77EDAE2A03E4C7006A44D8 /* HastaneNavigasyonu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B77EDA62A03E4C7006A44D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2B77EDAD2A03E4C7006A44D8 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 2B77EDA92A03E4C7006A44D8 /* Build configuration list for PBXProject "HastaneNavigasyonu" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B77EDA52A03E4C7006A44D8;
+			productRefGroup = 2B77EDAF2A03E4C7006A44D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B77EDAD2A03E4C7006A44D8 /* HastaneNavigasyonu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B77EDAC2A03E4C7006A44D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B77EDCF2A03EEC7006A44D8 /* hospitals.json in Resources */,
+				2B77EDC12A03E4C9006A44D8 /* LaunchScreen.storyboard in Resources */,
+				2B77EDBE2A03E4C9006A44D8 /* Assets.xcassets in Resources */,
+				2B77EDB92A03E4C7006A44D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B77EDAA2A03E4C7006A44D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B77EDCC2A03E668006A44D8 /* SearchViewController.swift in Sources */,
+				2B77EDB62A03E4C7006A44D8 /* MeetViewController.swift in Sources */,
+				2B77EDB22A03E4C7006A44D8 /* AppDelegate.swift in Sources */,
+				2B77EDB42A03E4C7006A44D8 /* SceneDelegate.swift in Sources */,
+				2B77EDCA2A03E656006A44D8 /* MapViewController.swift in Sources */,
+				2B77EDBC2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B77EDB72A03E4C7006A44D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B77EDB82A03E4C7006A44D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B77EDBF2A03E4C9006A44D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B77EDC02A03E4C9006A44D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B77EDC32A03E4C9006A44D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B77EDC42A03E4C9006A44D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B77EDC62A03E4C9006A44D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HW29HQY635;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HastaneNavigasyonu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetakdeniz.HastaneNavigasyonu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B77EDC72A03E4C9006A44D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HW29HQY635;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HastaneNavigasyonu/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mehmetakdeniz.HastaneNavigasyonu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B77EDA92A03E4C7006A44D8 /* Build configuration list for PBXProject "HastaneNavigasyonu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B77EDC32A03E4C9006A44D8 /* Debug */,
+				2B77EDC42A03E4C9006A44D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B77EDC52A03E4C9006A44D8 /* Build configuration list for PBXNativeTarget "HastaneNavigasyonu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B77EDC62A03E4C9006A44D8 /* Debug */,
+				2B77EDC72A03E4C9006A44D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2B77EDBA2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B77EDBB2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodel */,
+			);
+			currentVersion = 2B77EDBB2A03E4C7006A44D8 /* HastaneNavigasyonu.xcdatamodel */;
+			path = HastaneNavigasyonu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2B77EDA62A03E4C7006A44D8 /* Project object */;
+}

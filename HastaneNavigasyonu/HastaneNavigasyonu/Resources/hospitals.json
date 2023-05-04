@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Elazığ Devlet Hastanesi",
+        "latitude": 38.6751639,
+        "longitude": 39.2085463
+    },
+    {
+        "name": "Fırat Üniversitesi Hastanesi",
+        "latitude": 38.6320541,
+        "longitude": 39.2919509
+    },
+    {
+        "name": "Özel Elazığ İhtisas Hastanesi",
+        "latitude": 38.6751019,
+        "longitude": 39.213058
+    },
+    {
+        "name": "Elazığ Medicalpark Hastanesi",
+        "latitude": 38.680704,
+        "longitude": 39.222440
+    },
+    {
+        "name": "Özel Elazığ Güneydoğu Hastanesi",
+        "latitude": 38.657345,
+        "longitude": 39.211099
+    },
+    {
+        "name": "Elazığ Ağız ve Diş Sağlığı Merkezi",
+        "latitude": 38.677063,
+        "longitude": 39.216996
+    }
+]
+

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2cf-fD-J0Z">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hastane Ara-->
+        <scene sceneID="Ovd-M9-PwZ">
+            <objects>
+                <viewController id="oUB-Ru-8bM" customClass="SearchViewController" customModule="HastaneNavigasyonu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t1a-dR-sHV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="B8I-jW-EF9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oUB-Ru-8bM" id="mRf-An-U9b"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ovx-ys-CI2">
+                                <rect key="frame" x="0.0" y="115" width="393" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FFn-LC-gUG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ovx-ys-CI2" firstAttribute="top" secondItem="B8I-jW-EF9" secondAttribute="bottom" id="2e5-zr-595"/>
+                            <constraint firstItem="FFn-LC-gUG" firstAttribute="bottom" secondItem="Ovx-ys-CI2" secondAttribute="bottom" id="4bw-iU-59H"/>
+                            <constraint firstItem="B8I-jW-EF9" firstAttribute="top" secondItem="FFn-LC-gUG" secondAttribute="top" id="EyI-X7-OvE"/>
+                            <constraint firstItem="B8I-jW-EF9" firstAttribute="trailing" secondItem="FFn-LC-gUG" secondAttribute="trailing" id="Zas-ac-Jps"/>
+                            <constraint firstItem="B8I-jW-EF9" firstAttribute="leading" secondItem="FFn-LC-gUG" secondAttribute="leading" id="cSg-Sx-jUL"/>
+                            <constraint firstItem="FFn-LC-gUG" firstAttribute="trailing" secondItem="Ovx-ys-CI2" secondAttribute="trailing" id="f1g-SQ-Gro"/>
+                            <constraint firstItem="Ovx-ys-CI2" firstAttribute="leading" secondItem="FFn-LC-gUG" secondAttribute="leading" id="ntf-nt-dNJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hastane Ara" image="magnifyingglass" catalog="system" id="Kw9-EQ-q97"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mas-QA-7Dk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="914" y="813"/>
+        </scene>
+        <!--Randevular-->
+        <scene sceneID="JTv-My-eU0">
+            <objects>
+                <viewController id="JNY-Bb-7Er" customClass="MeetViewController" customModule="HastaneNavigasyonu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RE1-36-2EM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-4U-PLr">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1df-el-Oxj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1df-el-Oxj" firstAttribute="bottom" secondItem="ZLa-4U-PLr" secondAttribute="bottom" id="EH8-hi-rPN"/>
+                            <constraint firstItem="1df-el-Oxj" firstAttribute="trailing" secondItem="ZLa-4U-PLr" secondAttribute="trailing" id="F5d-XN-2Ol"/>
+                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="leading" secondItem="1df-el-Oxj" secondAttribute="leading" id="yco-WW-Z0i"/>
+                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="top" secondItem="1df-el-Oxj" secondAttribute="top" id="ziV-16-QVX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Randevular" image="calendar.badge.clock" catalog="system" id="XCu-54-vSO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZE9-OK-nS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="813"/>
+        </scene>
+        <!--Hastaneler-->
+        <scene sceneID="CR5-GP-qjg">
+            <objects>
+                <viewController id="OYK-QW-nRL" customClass="MapViewController" customModule="HastaneNavigasyonu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DyQ-Cu-YK8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Hastane Ara" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-RH-ten">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OYK-QW-nRL" id="BHI-xA-rcW"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjy-QM-Uz3">
+                                <rect key="frame" x="0.0" y="734" width="393" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="En Yakın Hastane"/>
+                                <connections>
+                                    <action selector="findNearestHospital:" destination="OYK-QW-nRL" eventType="touchUpInside" id="01x-Xs-ade"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWA-73-sUk">
+                                <rect key="frame" x="0.0" y="115" width="393" height="619"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lOe-Yh-vyP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mjy-QM-Uz3" firstAttribute="top" secondItem="bWA-73-sUk" secondAttribute="bottom" id="37f-ZX-0AE"/>
+                            <constraint firstItem="SJA-RH-ten" firstAttribute="top" secondItem="lOe-Yh-vyP" secondAttribute="top" id="3ri-5N-wue"/>
+                            <constraint firstItem="SJA-RH-ten" firstAttribute="trailing" secondItem="lOe-Yh-vyP" secondAttribute="trailing" id="3uW-PY-BRg"/>
+                            <constraint firstItem="SJA-RH-ten" firstAttribute="leading" secondItem="lOe-Yh-vyP" secondAttribute="leading" id="5DD-S2-Mr0"/>
+                            <constraint firstItem="lOe-Yh-vyP" firstAttribute="trailing" secondItem="bWA-73-sUk" secondAttribute="trailing" id="6nN-t3-SYR"/>
+                            <constraint firstItem="mjy-QM-Uz3" firstAttribute="bottom" secondItem="lOe-Yh-vyP" secondAttribute="bottom" id="Tm8-zq-5Mg"/>
+                            <constraint firstItem="bWA-73-sUk" firstAttribute="leading" secondItem="lOe-Yh-vyP" secondAttribute="leading" id="gd4-cG-YdB"/>
+                            <constraint firstItem="lOe-Yh-vyP" firstAttribute="trailing" secondItem="mjy-QM-Uz3" secondAttribute="trailing" id="jb5-Il-MPh"/>
+                            <constraint firstItem="bWA-73-sUk" firstAttribute="top" secondItem="SJA-RH-ten" secondAttribute="bottom" id="oXy-Ms-USh"/>
+                            <constraint firstItem="mjy-QM-Uz3" firstAttribute="leading" secondItem="lOe-Yh-vyP" secondAttribute="leading" id="uJ6-AO-tWj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hastaneler" image="map" catalog="system" id="0ds-tQ-vwP"/>
+                    <connections>
+                        <outlet property="mapView" destination="bWA-73-sUk" id="BBF-im-Bmy"/>
+                        <outlet property="nearestHospitalButton" destination="mjy-QM-Uz3" id="V14-Um-EXc"/>
+                        <outlet property="searchBar" destination="SJA-RH-ten" id="JhE-AC-0hU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVb-ms-aai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="813"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tWm-WD-GtB">
+            <objects>
+                <tabBarController id="2cf-fD-J0Z" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JWA-Hf-k0C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OYK-QW-nRL" kind="relationship" relationship="viewControllers" id="9ri-lO-pYc"/>
+                        <segue destination="oUB-Ru-8bM" kind="relationship" relationship="viewControllers" id="uT8-RG-RCO"/>
+                        <segue destination="JNY-Bb-7Er" kind="relationship" relationship="viewControllers" id="ybl-Gk-hLJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mo2-jR-5qO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
