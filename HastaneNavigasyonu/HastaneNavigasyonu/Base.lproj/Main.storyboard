@@ -61,24 +61,84 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-4U-PLr">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="675.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AppointmentCell" rowHeight="82" id="etK-UG-aa7" customClass="AppointmentTableViewCell" customModule="HastaneNavigasyonu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etK-UG-aa7" id="r1K-Dg-kmR">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Shp-uJ-vBq">
+                                                    <rect key="frame" x="2" y="2" width="389" height="78"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxZ-AS-sdw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="389" height="26"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOi-8h-Jre">
+                                                            <rect key="frame" x="0.0" y="26" width="389" height="26"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-Gh-RUe">
+                                                            <rect key="frame" x="0.0" y="52" width="389" height="26"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Shp-uJ-vBq" firstAttribute="leading" secondItem="r1K-Dg-kmR" secondAttribute="leading" constant="2" id="8Dn-5g-jan"/>
+                                                <constraint firstItem="Shp-uJ-vBq" firstAttribute="top" secondItem="r1K-Dg-kmR" secondAttribute="top" constant="2" id="C7C-H2-Gwx"/>
+                                                <constraint firstAttribute="bottom" secondItem="Shp-uJ-vBq" secondAttribute="bottom" constant="2" id="ll0-Ob-PYK"/>
+                                                <constraint firstAttribute="trailing" secondItem="Shp-uJ-vBq" secondAttribute="trailing" constant="2" id="y65-BA-rVn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="XOi-8h-Jre" id="eYy-9F-0OK"/>
+                                            <outlet property="hospitalLabel" destination="QxZ-AS-sdw" id="z8y-Re-Efr"/>
+                                            <outlet property="timeLabel" destination="dbg-Gh-RUe" id="67E-pu-fU0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsQ-rt-R6y">
+                                <rect key="frame" x="0.0" y="734.66666666666663" width="393" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title=" Randevu Ekle"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="JNY-Bb-7Er" eventType="touchUpInside" id="9Ln-Fb-vja"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1df-el-Oxj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1df-el-Oxj" firstAttribute="bottom" secondItem="ZLa-4U-PLr" secondAttribute="bottom" id="EH8-hi-rPN"/>
-                            <constraint firstItem="1df-el-Oxj" firstAttribute="trailing" secondItem="ZLa-4U-PLr" secondAttribute="trailing" id="F5d-XN-2Ol"/>
-                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="leading" secondItem="1df-el-Oxj" secondAttribute="leading" id="yco-WW-Z0i"/>
-                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="top" secondItem="1df-el-Oxj" secondAttribute="top" id="ziV-16-QVX"/>
+                            <constraint firstItem="1df-el-Oxj" firstAttribute="trailing" secondItem="DsQ-rt-R6y" secondAttribute="trailing" id="17w-Di-78H"/>
+                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="top" secondItem="1df-el-Oxj" secondAttribute="top" id="5ab-eW-ycW"/>
+                            <constraint firstItem="DsQ-rt-R6y" firstAttribute="top" secondItem="ZLa-4U-PLr" secondAttribute="bottom" id="IeO-3W-zfx"/>
+                            <constraint firstItem="DsQ-rt-R6y" firstAttribute="leading" secondItem="1df-el-Oxj" secondAttribute="leading" id="g8W-Hg-ynP"/>
+                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="leading" secondItem="1df-el-Oxj" secondAttribute="leading" id="j1f-O3-V8v"/>
+                            <constraint firstItem="DsQ-rt-R6y" firstAttribute="bottom" secondItem="1df-el-Oxj" secondAttribute="bottom" id="j3Y-Rq-pVg"/>
+                            <constraint firstItem="ZLa-4U-PLr" firstAttribute="trailing" secondItem="1df-el-Oxj" secondAttribute="trailing" id="oF4-Ii-ofc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Randevular" image="calendar.badge.clock" catalog="system" id="XCu-54-vSO"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZLa-4U-PLr" id="Fdg-LU-czS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE9-OK-nS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="813"/>
+            <point key="canvasLocation" x="2588.5496183206105" y="812.67605633802816"/>
         </scene>
         <!--Hastaneler-->
         <scene sceneID="CR5-GP-qjg">
@@ -88,13 +148,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Hastane Ara" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-RH-ten">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="OYK-QW-nRL" id="BHI-xA-rcW"/>
-                                </connections>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjy-QM-Uz3">
                                 <rect key="frame" x="0.0" y="807" width="393" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -104,7 +157,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWA-73-sUk">
-                                <rect key="frame" x="0.0" y="56" width="393" height="751"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="807"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -112,15 +165,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mjy-QM-Uz3" firstAttribute="top" secondItem="bWA-73-sUk" secondAttribute="bottom" id="37f-ZX-0AE"/>
-                            <constraint firstItem="SJA-RH-ten" firstAttribute="top" secondItem="lOe-Yh-vyP" secondAttribute="top" id="3ri-5N-wue"/>
-                            <constraint firstItem="SJA-RH-ten" firstAttribute="trailing" secondItem="lOe-Yh-vyP" secondAttribute="trailing" id="3uW-PY-BRg"/>
-                            <constraint firstItem="SJA-RH-ten" firstAttribute="leading" secondItem="lOe-Yh-vyP" secondAttribute="leading" id="5DD-S2-Mr0"/>
                             <constraint firstItem="lOe-Yh-vyP" firstAttribute="trailing" secondItem="bWA-73-sUk" secondAttribute="trailing" id="6nN-t3-SYR"/>
                             <constraint firstItem="mjy-QM-Uz3" firstAttribute="bottom" secondItem="lOe-Yh-vyP" secondAttribute="bottom" id="Tm8-zq-5Mg"/>
                             <constraint firstItem="bWA-73-sUk" firstAttribute="leading" secondItem="lOe-Yh-vyP" secondAttribute="leading" id="gd4-cG-YdB"/>
                             <constraint firstItem="lOe-Yh-vyP" firstAttribute="trailing" secondItem="mjy-QM-Uz3" secondAttribute="trailing" id="jb5-Il-MPh"/>
-                            <constraint firstItem="bWA-73-sUk" firstAttribute="top" secondItem="SJA-RH-ten" secondAttribute="bottom" id="oXy-Ms-USh"/>
                             <constraint firstItem="mjy-QM-Uz3" firstAttribute="leading" secondItem="lOe-Yh-vyP" secondAttribute="leading" id="uJ6-AO-tWj"/>
+                            <constraint firstItem="bWA-73-sUk" firstAttribute="top" secondItem="lOe-Yh-vyP" secondAttribute="top" id="xf9-7e-M3N"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hastaneler" image="map" catalog="system" id="0ds-tQ-vwP"/>
@@ -128,7 +178,6 @@
                     <connections>
                         <outlet property="mapView" destination="bWA-73-sUk" id="BBF-im-Bmy"/>
                         <outlet property="nearestHospitalButton" destination="mjy-QM-Uz3" id="V14-Um-EXc"/>
-                        <outlet property="searchBar" destination="SJA-RH-ten" id="JhE-AC-0hU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVb-ms-aai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -162,6 +211,7 @@
         <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="map" catalog="system" width="128" height="112"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

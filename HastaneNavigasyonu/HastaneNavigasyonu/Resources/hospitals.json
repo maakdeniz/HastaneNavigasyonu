@@ -17,7 +17,7 @@
     {
         "name": "Elazığ Medicalpark Hastanesi",
         "latitude": 38.680704,
-        "longitude": 39.222440
+        "longitude": 39.22244
     },
     {
         "name": "Özel Elazığ Güneydoğu Hastanesi",
@@ -28,6 +28,55 @@
         "name": "Elazığ Ağız ve Diş Sağlığı Merkezi",
         "latitude": 38.677063,
         "longitude": 39.216996
+    },
+    {
+        "name": "Elazığ özel Medilines Hastanesi",
+        "latitude": 38.6838038,
+        "longitude": 39.2180254
+    },
+    {
+        "name": "Elazığ Eğitim ve Araştırma Hastanesi",
+        "latitude": 38.6674015,
+        "longitude": 39.2100061
+    },
+    {
+        "name": "Baskil Devlet Hastanesi",
+        "latitude": 38.7907197,
+        "longitude": 39.5366988
+    },
+    {
+        "name": "Ağın Devlet Hastanesi",
+        "latitude": 39.1491007,
+        "longitude": 40.1007101
+    },
+    {
+        "name": "Arıcak Devlet Hastanesi",
+        "latitude": 38.6321727,
+        "longitude": 39.9034723
+    },
+    {
+        "name": "Karakoçan Devlet Hastanesi",
+        "latitude": 38.9613918,
+        "longitude": 39.3430976
+    },
+    {
+        "name": "Keban Devlet Hastanesi",
+        "latitude": 38.9203712,
+        "longitude": 38.7102406
+    },
+    {
+        "name": "Maden Devlet Hastanesi",
+        "latitude": 38.6888093,
+        "longitude": 39.6792469
+    },
+    {
+        "name": "Palu Devlet Hastanesi",
+        "latitude": 38.9444208,
+        "longitude": 39.9097939
+    },
+    {
+        "name": "Sivrice Devlet Hastanesi",
+        "latitude": 39.4015884,
+        "longitude": 41.3428716
     }
 ]
-

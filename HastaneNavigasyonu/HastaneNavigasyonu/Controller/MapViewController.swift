@@ -32,11 +32,16 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupSearchResultsController()
+        //setupSearchResultsController()
         setupMapView()
         setupLocationManager()
         loadHospitalsFromFile()
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if let coordinate = selectedHospitalCoordinate {
                drawRoute(to: coordinate)
            }
@@ -50,50 +55,50 @@ class MapViewController: UIViewController {
 }
 
 // MARK: - SearchBar
-extension MapViewController: UISearchBarDelegate, UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text, !searchText.isEmpty else { return }
-        searchResults = filterHospitals(by: searchText)
-        searchResultsTableViewController?.tableView.reloadData()
-    }
-    func setupSearchResultsController() {
-        searchResultsTableViewController = UITableViewController(style: .plain)
-        searchResultsTableViewController?.tableView.delegate = self
-        searchResultsTableViewController?.tableView.dataSource = self
-        searchController = UISearchController(searchResultsController: searchResultsTableViewController)
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.showsCancelButton = true
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.dimsBackgroundDuringPresentation = true
-        definesPresentationContext = true
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-    }
-    
-//    func setupSearchBar() {
-//        searchBar.delegate = self
+//extension MapViewController: UISearchBarDelegate, UISearchResultsUpdating {
+//    func updateSearchResults(for searchController: UISearchController) {
+//        guard let searchText = searchController.searchBar.text, !searchText.isEmpty else { return }
+//        searchResults = filterHospitals(by: searchText)
+//        searchResultsTableViewController?.tableView.reloadData()
+//    }
+//    func setupSearchResultsController() {
+//        searchResultsTableViewController = UITableViewController(style: .plain)
+//        searchResultsTableViewController?.tableView.delegate = self
+//        searchResultsTableViewController?.tableView.dataSource = self
+//        searchController = UISearchController(searchResultsController: searchResultsTableViewController)
+//        searchController.searchResultsUpdater = self
+//        searchController.obscuresBackgroundDuringPresentation = false
+//        searchController.searchBar.showsCancelButton = true
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        searchController.dimsBackgroundDuringPresentation = true
+//        definesPresentationContext = true
 //        navigationItem.searchController = searchController
 //        navigationItem.hidesSearchBarWhenScrolling = false
 //    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
-        let filteredHospitals = filterHospitals(by: searchText)
-        mapView.showAnnotations(filteredHospitals, animated: true)
-    }
-    
-    func filterHospitals(by searchText: String) -> [Hospital] {
-        return mapView.annotations.compactMap { annotation -> Hospital? in
-            if let hospital = annotation as? Hospital, hospital.name.lowercased().contains(searchText.lowercased()) {
-                return hospital
-            } else {
-                return nil
-            }
-        }
-    }
-}
+//
+////    func setupSearchBar() {
+////        searchBar.delegate = self
+////        navigationItem.searchController = searchController
+////        navigationItem.hidesSearchBarWhenScrolling = false
+////    }
+//
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        searchBar.resignFirstResponder()
+//        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
+//        let filteredHospitals = filterHospitals(by: searchText)
+//        mapView.showAnnotations(filteredHospitals, animated: true)
+//    }
+//
+//    func filterHospitals(by searchText: String) -> [Hospital] {
+//        return mapView.annotations.compactMap { annotation -> Hospital? in
+//            if let hospital = annotation as? Hospital, hospital.name.lowercased().contains(searchText.lowercased()) {
+//                return hospital
+//            } else {
+//                return nil
+//            }
+//        }
+//    }
+//}
 
 
 // MARK: - UITableViewDelegate & UITableViewDataSource
@@ -154,21 +159,38 @@ extension MapViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    func drawRoute(to destination: CLLocationCoordinate2D) {
-        guard let currentLocation = currentLocation else { return }
-        let request = MKDirections.Request()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation.coordinate, addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination, addressDictionary: nil))
-        request.transportType = .automobile
-        
-        let directions = MKDirections(request: request)
-        directions.calculate { [unowned self] response, error in
-            guard let unwrappedResponse = response else { return }
+    func drawRoute(to destinationCoordinate: CLLocationCoordinate2D) {
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            mapView.showsUserLocation = true
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
             
-            for route in  unwrappedResponse.routes {
-                let routeOverlay = route.polyline
-                self.mapView.addOverlay(routeOverlay)
-                self.mapView.setVisibleMapRect(routeOverlay.boundingMapRect, edgePadding: UIEdgeInsets(top: 80, left: 80, bottom: 80, right: 80), animated: true)
+            let sourcePlacemark = MKPlacemark(coordinate: mapView.userLocation.coordinate, addressDictionary: nil)
+            let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil)
+            
+            let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+            let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+            
+            let directionRequest = MKDirections.Request()
+            directionRequest.source = sourceMapItem
+            directionRequest.destination = destinationMapItem
+            directionRequest.transportType = .automobile
+            
+            let directions = MKDirections(request: directionRequest)
+            directions.calculate { [unowned self] (response, error) in
+                guard let response = response else {
+                    if let error = error {
+                        print("Error: \(error)")
+                    }
+                    return
+                }
+                
+                let route = response.routes[0]
+                self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+                
+                let rect = route.polyline.boundingMapRect
+                self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
     }
