@@ -16,11 +16,13 @@ class MapViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nearestHospitalButton: UIButton!
+    
     var searchResultsTableViewController: UITableViewController?
     var searchController: UISearchController!
     var searchResults: [Hospital] = []
     var selectedHospital: Hospital?
     var routeOverlay: MKOverlay?
+    var selectedHospitalCoordinate: CLLocationCoordinate2D?
     
     
     
@@ -29,10 +31,15 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupSearchResultsController()
         setupMapView()
         setupLocationManager()
         loadHospitalsFromFile()
+        
+        if let coordinate = selectedHospitalCoordinate {
+               drawRoute(to: coordinate)
+           }
     }
     
     
@@ -56,19 +63,19 @@ extension MapViewController: UISearchBarDelegate, UISearchResultsUpdating {
         searchController = UISearchController(searchResultsController: searchResultsTableViewController)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchBar.showsCancelButton = true
+        searchController.searchBar.showsCancelButton = true
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
-        searchBar.delegate = self
-        searchBar.placeholder = "Ara"
-    }
-    
-    func setupSearchBar() {
-        searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
     }
+    
+//    func setupSearchBar() {
+//        searchBar.delegate = self
+//        navigationItem.searchController = searchController
+//        navigationItem.hidesSearchBarWhenScrolling = false
+//    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()

@@ -42,10 +42,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hastane Ara" image="magnifyingglass" catalog="system" id="Kw9-EQ-q97"/>
+                    <connections>
+                        <outlet property="searchBar" destination="B8I-jW-EF9" id="vtU-bN-dVF"/>
+                        <outlet property="tableview" destination="Ovx-ys-CI2" id="oIB-e8-Twu"/>
+                        <segue destination="OYK-QW-nRL" kind="show" identifier="showRoute" id="jkx-2M-nlV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mas-QA-7Dk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="813"/>
+            <point key="canvasLocation" x="1517" y="813"/>
         </scene>
         <!--Randevular-->
         <scene sceneID="JTv-My-eU0">
@@ -73,25 +78,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE9-OK-nS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="813"/>
+            <point key="canvasLocation" x="2590" y="813"/>
         </scene>
         <!--Hastaneler-->
         <scene sceneID="CR5-GP-qjg">
             <objects>
                 <viewController id="OYK-QW-nRL" customClass="MapViewController" customModule="HastaneNavigasyonu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DyQ-Cu-YK8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Hastane Ara" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-RH-ten">
-                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="OYK-QW-nRL" id="BHI-xA-rcW"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjy-QM-Uz3">
-                                <rect key="frame" x="0.0" y="734" width="393" height="35"/>
+                                <rect key="frame" x="0.0" y="807" width="393" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="En Yakın Hastane"/>
                                 <connections>
@@ -99,7 +104,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWA-73-sUk">
-                                <rect key="frame" x="0.0" y="115" width="393" height="619"/>
+                                <rect key="frame" x="0.0" y="56" width="393" height="751"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -119,6 +124,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hastaneler" image="map" catalog="system" id="0ds-tQ-vwP"/>
+                    <navigationItem key="navigationItem" id="eP0-6K-nLr"/>
                     <connections>
                         <outlet property="mapView" destination="bWA-73-sUk" id="BBF-im-Bmy"/>
                         <outlet property="nearestHospitalButton" destination="mjy-QM-Uz3" id="V14-Um-EXc"/>
@@ -149,6 +155,9 @@
             <point key="canvasLocation" x="933" y="7"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jkx-2M-nlV"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
