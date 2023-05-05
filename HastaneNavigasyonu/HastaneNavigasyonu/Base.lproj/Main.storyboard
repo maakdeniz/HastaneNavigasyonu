@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mas-QA-7Dk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="813"/>
+            <point key="canvasLocation" x="1358" y="813"/>
         </scene>
         <!--Randevular-->
         <scene sceneID="JTv-My-eU0">
@@ -139,6 +139,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE9-OK-nS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2588.5496183206105" y="812.67605633802816"/>
+        </scene>
+        <!--Hospital Picker View Controller-->
+        <scene sceneID="LJx-oM-fxN">
+            <objects>
+                <viewController storyboardIdentifier="HospitalPickerViewController" id="82m-xg-XBu" customClass="HospitalPickerViewController" customModule="HastaneNavigasyonu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUR-Lz-fAe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uy3-8m-4mC">
+                                <rect key="frame" x="16" y="75" width="361" height="101"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-fN-Qae">
+                                <rect key="frame" x="16" y="214" width="361" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="lHS-IF-2w9"/>
+                                </constraints>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saati Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqe-U6-oDG">
+                                <rect key="frame" x="144.66666666666666" y="313" width="105" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ciH-0X-SmO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-hk-HlI">
+                                <rect key="frame" x="169" y="389" width="56" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="wLW-Xu-gUP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ekle"/>
+                                <connections>
+                                    <action selector="confirmButtonTapped:" destination="82m-xg-XBu" eventType="touchUpInside" id="fe2-Q4-kHJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZNc-Of-sCn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fXD-fN-Qae" firstAttribute="top" secondItem="Uy3-8m-4mC" secondAttribute="bottom" constant="38" id="HHr-kT-7ay"/>
+                            <constraint firstItem="Jqe-U6-oDG" firstAttribute="top" secondItem="fXD-fN-Qae" secondAttribute="bottom" constant="32" id="Ife-tT-hBu"/>
+                            <constraint firstItem="Jqe-U6-oDG" firstAttribute="centerX" secondItem="2xr-hk-HlI" secondAttribute="centerX" id="LSu-s5-1o6"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="leading" secondItem="fXD-fN-Qae" secondAttribute="leading" id="PRQ-Zc-Iyi"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="trailing" secondItem="fXD-fN-Qae" secondAttribute="trailing" id="YFA-eT-lES"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="leading" secondItem="sUR-Lz-fAe" secondAttribute="leadingMargin" id="cLC-z8-31q"/>
+                            <constraint firstItem="ZNc-Of-sCn" firstAttribute="bottom" secondItem="2xr-hk-HlI" secondAttribute="bottom" constant="345" id="gut-Gu-oZF"/>
+                            <constraint firstItem="2xr-hk-HlI" firstAttribute="top" secondItem="Jqe-U6-oDG" secondAttribute="bottom" constant="42" id="i4Q-HI-fMc"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="top" secondItem="ZNc-Of-sCn" secondAttribute="top" constant="16" id="j0b-Nk-87m"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="trailing" secondItem="sUR-Lz-fAe" secondAttribute="trailingMargin" id="k9d-cW-XKZ"/>
+                            <constraint firstItem="2xr-hk-HlI" firstAttribute="leading" secondItem="ZNc-Of-sCn" secondAttribute="leading" constant="169" id="meL-iQ-Wmn"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="XkZ-hX-rgM"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="fXD-fN-Qae" id="lh0-h3-Snm"/>
+                        <outlet property="pickerView" destination="Uy3-8m-4mC" id="LGN-gv-Sbf"/>
+                        <outlet property="timeTextField" destination="Jqe-U6-oDG" id="yAe-DW-FH2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNI-IJ-xrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2589" y="1550"/>
         </scene>
         <!--Hastaneler-->
         <scene sceneID="CR5-GP-qjg">

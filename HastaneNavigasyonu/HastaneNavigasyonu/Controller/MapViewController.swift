@@ -32,7 +32,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //setupSearchResultsController()
+        
         setupMapView()
         setupLocationManager()
         loadHospitalsFromFile()
@@ -54,51 +54,7 @@ class MapViewController: UIViewController {
     }
 }
 
-// MARK: - SearchBar
-//extension MapViewController: UISearchBarDelegate, UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//        guard let searchText = searchController.searchBar.text, !searchText.isEmpty else { return }
-//        searchResults = filterHospitals(by: searchText)
-//        searchResultsTableViewController?.tableView.reloadData()
-//    }
-//    func setupSearchResultsController() {
-//        searchResultsTableViewController = UITableViewController(style: .plain)
-//        searchResultsTableViewController?.tableView.delegate = self
-//        searchResultsTableViewController?.tableView.dataSource = self
-//        searchController = UISearchController(searchResultsController: searchResultsTableViewController)
-//        searchController.searchResultsUpdater = self
-//        searchController.obscuresBackgroundDuringPresentation = false
-//        searchController.searchBar.showsCancelButton = true
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        searchController.dimsBackgroundDuringPresentation = true
-//        definesPresentationContext = true
-//        navigationItem.searchController = searchController
-//        navigationItem.hidesSearchBarWhenScrolling = false
-//    }
-//
-////    func setupSearchBar() {
-////        searchBar.delegate = self
-////        navigationItem.searchController = searchController
-////        navigationItem.hidesSearchBarWhenScrolling = false
-////    }
-//
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        searchBar.resignFirstResponder()
-//        guard let searchText = searchBar.text, !searchText.isEmpty else { return }
-//        let filteredHospitals = filterHospitals(by: searchText)
-//        mapView.showAnnotations(filteredHospitals, animated: true)
-//    }
-//
-//    func filterHospitals(by searchText: String) -> [Hospital] {
-//        return mapView.annotations.compactMap { annotation -> Hospital? in
-//            if let hospital = annotation as? Hospital, hospital.name.lowercased().contains(searchText.lowercased()) {
-//                return hospital
-//            } else {
-//                return nil
-//            }
-//        }
-//    }
-//}
+
 
 
 // MARK: - UITableViewDelegate & UITableViewDataSource

@@ -16,6 +16,10 @@ class SearchViewController: UIViewController {
     
     var hospitals: [Hospital] = [] // Bu, hastanelerinizi depolamak için kullanılacak
     var filteredHospitals: [Hospital] = [] // Bu, arama sonuçlarını depolamak için kullanılacak
+    
+    var selectedHospital: Hospital?
+        var selectedDate: Date?
+        var selectedTime: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
