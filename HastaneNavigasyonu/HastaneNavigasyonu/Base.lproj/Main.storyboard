@@ -45,14 +45,14 @@
                     <connections>
                         <outlet property="searchBar" destination="B8I-jW-EF9" id="vtU-bN-dVF"/>
                         <outlet property="tableview" destination="Ovx-ys-CI2" id="oIB-e8-Twu"/>
-                        <segue destination="OYK-QW-nRL" kind="show" identifier="showRoute" id="jkx-2M-nlV"/>
+                        <segue destination="OYK-QW-nRL" kind="showDetail" identifier="showRoute" id="jkx-2M-nlV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mas-QA-7Dk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1358" y="813"/>
         </scene>
-        <!--Randevular-->
+        <!--Meet View Controller-->
         <scene sceneID="JTv-My-eU0">
             <objects>
                 <viewController id="JNY-Bb-7Er" customClass="MeetViewController" customModule="HastaneNavigasyonu" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-4U-PLr">
-                                <rect key="frame" x="0.0" y="59" width="393" height="675.66666666666663"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="631.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AppointmentCell" rowHeight="82" id="etK-UG-aa7" customClass="AppointmentTableViewCell" customModule="HastaneNavigasyonu" customModuleProvider="target">
@@ -115,7 +115,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title=" Randevu Ekle"/>
                                 <connections>
-                                    <action selector="addButtonTapped:" destination="JNY-Bb-7Er" eventType="touchUpInside" id="9Ln-Fb-vja"/>
+                                    <action selector="addButtonTapped:" destination="JNY-Bb-7Er" eventType="touchUpInside" id="z7B-iT-bku"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,14 +131,14 @@
                             <constraint firstItem="ZLa-4U-PLr" firstAttribute="trailing" secondItem="1df-el-Oxj" secondAttribute="trailing" id="oF4-Ii-ofc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Randevular" image="calendar.badge.clock" catalog="system" id="XCu-54-vSO"/>
+                    <navigationItem key="navigationItem" id="P8N-hn-9Yv"/>
                     <connections>
                         <outlet property="tableView" destination="ZLa-4U-PLr" id="Fdg-LU-czS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZE9-OK-nS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588.5496183206105" y="812.67605633802816"/>
+            <point key="canvasLocation" x="3498" y="813"/>
         </scene>
         <!--Hospital Picker View Controller-->
         <scene sceneID="LJx-oM-fxN">
@@ -148,53 +148,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uy3-8m-4mC">
-                                <rect key="frame" x="16" y="75" width="361" height="101"/>
+                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uy3-8m-4mC">
+                                <rect key="frame" x="16" y="75" width="361" height="216"/>
                             </pickerView>
-                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-fN-Qae">
-                                <rect key="frame" x="16" y="214" width="361" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="lHS-IF-2w9"/>
-                                </constraints>
+                            <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-fN-Qae">
+                                <rect key="frame" x="16" y="307" width="361" height="336"/>
                             </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saati Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqe-U6-oDG">
-                                <rect key="frame" x="144.66666666666666" y="313" width="105" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="ciH-0X-SmO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-hk-HlI">
-                                <rect key="frame" x="169" y="389" width="56" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="wLW-Xu-gUP"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="709" width="361" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ekle"/>
                                 <connections>
                                     <action selector="confirmButtonTapped:" destination="82m-xg-XBu" eventType="touchUpInside" id="fe2-Q4-kHJ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saati Giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqe-U6-oDG">
+                                <rect key="frame" x="16" y="659" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZNc-Of-sCn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fXD-fN-Qae" firstAttribute="top" secondItem="Uy3-8m-4mC" secondAttribute="bottom" constant="38" id="HHr-kT-7ay"/>
-                            <constraint firstItem="Jqe-U6-oDG" firstAttribute="top" secondItem="fXD-fN-Qae" secondAttribute="bottom" constant="32" id="Ife-tT-hBu"/>
-                            <constraint firstItem="Jqe-U6-oDG" firstAttribute="centerX" secondItem="2xr-hk-HlI" secondAttribute="centerX" id="LSu-s5-1o6"/>
-                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="leading" secondItem="fXD-fN-Qae" secondAttribute="leading" id="PRQ-Zc-Iyi"/>
-                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="trailing" secondItem="fXD-fN-Qae" secondAttribute="trailing" id="YFA-eT-lES"/>
-                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="leading" secondItem="sUR-Lz-fAe" secondAttribute="leadingMargin" id="cLC-z8-31q"/>
-                            <constraint firstItem="ZNc-Of-sCn" firstAttribute="bottom" secondItem="2xr-hk-HlI" secondAttribute="bottom" constant="345" id="gut-Gu-oZF"/>
-                            <constraint firstItem="2xr-hk-HlI" firstAttribute="top" secondItem="Jqe-U6-oDG" secondAttribute="bottom" constant="42" id="i4Q-HI-fMc"/>
-                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="top" secondItem="ZNc-Of-sCn" secondAttribute="top" constant="16" id="j0b-Nk-87m"/>
-                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="trailing" secondItem="sUR-Lz-fAe" secondAttribute="trailingMargin" id="k9d-cW-XKZ"/>
-                            <constraint firstItem="2xr-hk-HlI" firstAttribute="leading" secondItem="ZNc-Of-sCn" secondAttribute="leading" constant="169" id="meL-iQ-Wmn"/>
+                            <constraint firstItem="ZNc-Of-sCn" firstAttribute="trailing" secondItem="Uy3-8m-4mC" secondAttribute="trailing" constant="16" id="7Vj-TN-xfe"/>
+                            <constraint firstItem="2xr-hk-HlI" firstAttribute="top" secondItem="Jqe-U6-oDG" secondAttribute="bottom" constant="16" id="ACC-kG-BdH"/>
+                            <constraint firstItem="ZNc-Of-sCn" firstAttribute="trailing" secondItem="fXD-fN-Qae" secondAttribute="trailing" constant="16" id="JeL-3y-oOz"/>
+                            <constraint firstItem="fXD-fN-Qae" firstAttribute="leading" secondItem="ZNc-Of-sCn" secondAttribute="leading" constant="16" id="PP3-L4-WpO"/>
+                            <constraint firstItem="ZNc-Of-sCn" firstAttribute="trailing" secondItem="Jqe-U6-oDG" secondAttribute="trailing" constant="16" id="ZqU-nN-n95"/>
+                            <constraint firstItem="2xr-hk-HlI" firstAttribute="leading" secondItem="ZNc-Of-sCn" secondAttribute="leading" constant="16" id="gY5-cp-8Nu"/>
+                            <constraint firstItem="Jqe-U6-oDG" firstAttribute="top" secondItem="fXD-fN-Qae" secondAttribute="bottom" constant="16" id="qYf-Mf-tpL"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="leading" secondItem="ZNc-Of-sCn" secondAttribute="leading" constant="16" id="qYt-c5-jsO"/>
+                            <constraint firstItem="fXD-fN-Qae" firstAttribute="top" secondItem="Uy3-8m-4mC" secondAttribute="bottom" constant="16" id="sz2-9B-r7N"/>
+                            <constraint firstItem="Jqe-U6-oDG" firstAttribute="leading" secondItem="ZNc-Of-sCn" secondAttribute="leading" constant="16" id="vBN-rA-KH1"/>
+                            <constraint firstItem="ZNc-Of-sCn" firstAttribute="trailing" secondItem="2xr-hk-HlI" secondAttribute="trailing" constant="16" id="yJh-No-5hM"/>
+                            <constraint firstItem="Uy3-8m-4mC" firstAttribute="top" secondItem="ZNc-Of-sCn" secondAttribute="top" constant="16" id="yfG-73-mGU"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XkZ-hX-rgM"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="fXD-fN-Qae" id="lh0-h3-Snm"/>
@@ -204,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNI-IJ-xrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2589" y="1550"/>
+            <point key="canvasLocation" x="4288" y="813"/>
         </scene>
         <!--Hastaneler-->
         <scene sceneID="CR5-GP-qjg">
@@ -254,6 +245,7 @@
         <scene sceneID="tWm-WD-GtB">
             <objects>
                 <tabBarController id="2cf-fD-J0Z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qqk-bi-IUv"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JWA-Hf-k0C">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -262,12 +254,31 @@
                     <connections>
                         <segue destination="OYK-QW-nRL" kind="relationship" relationship="viewControllers" id="9ri-lO-pYc"/>
                         <segue destination="oUB-Ru-8bM" kind="relationship" relationship="viewControllers" id="uT8-RG-RCO"/>
-                        <segue destination="JNY-Bb-7Er" kind="relationship" relationship="viewControllers" id="ybl-Gk-hLJ"/>
+                        <segue destination="kaI-D5-cCK" kind="relationship" relationship="viewControllers" id="ybl-Gk-hLJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mo2-jR-5qO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933" y="7"/>
+        </scene>
+        <!--Randevular-->
+        <scene sceneID="Ffu-sf-BVV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0F6-ti-cij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kaI-D5-cCK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Randevular" image="calendar.badge.clock" catalog="system" id="XCu-54-vSO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yGg-b8-3m4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JNY-Bb-7Er" kind="relationship" relationship="rootViewController" id="B7K-JC-exH"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2588.5496183206105" y="812.67605633802816"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -105,8 +105,10 @@ class MeetViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func showHospitalPickerViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         let hospitalPickerController = storyboard.instantiateViewController(withIdentifier: "HospitalPickerViewController") as! HospitalPickerViewController
         hospitalPickerController.modalPresentationStyle = .overCurrentContext
+        hospitalPickerController.modalPresentationStyle = .fullScreen
         hospitalPickerController.modalTransitionStyle = .crossDissolve
         
         hospitalPickerController.hospitals = hospitals 
